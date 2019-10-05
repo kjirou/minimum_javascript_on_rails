@@ -1,7 +1,18 @@
 {
   "name": "minimum_javascript_on_rails",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && npm run webpack",
+    "clean": "if [ -e client/tmp ]; then rm -r client/tmp; fi && if [ -e public/client ]; then rm -r public/client; fi",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "$(npm bin)/webpack --config client/webpack/production-build.config.js"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "assets-webpack-plugin": "^3.9.10",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
 }

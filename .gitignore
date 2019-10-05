@@ -26,3 +26,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/client/tmp/
+/node_modules/
+/public/client/
+npm-debug.log
