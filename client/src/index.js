@@ -36,4 +36,4 @@ async function printMessageWithPromiseAndAsyncAwait() {
     console.log('Cound use async/await!');
   });
 };
-printMessageWithAsyncAwait();
+printMessageWithPromiseAndAsyncAwait();
