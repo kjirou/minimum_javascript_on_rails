@@ -7,7 +7,7 @@ const temporaryFilesRoot = path.join(__dirname, '../tmp'); // -> "{project-root}
 
 const baseWebpackConfig = {
   entry: {
-    'webpacked': path.join(javaScriptRoot, 'index.js'),
+    'webpacked': path.join(javaScriptRoot, 'index.ts'),
   },
   output: {
     filename: '[name]-[chunkhash].js',
@@ -16,31 +16,16 @@ const baseWebpackConfig = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    // This "forceAllTransforms" transforms sources for working on many browsers as possible.
-                    //
-                    // Normally, "@babel/preset-env" performs only the minimum necessary conversions
-                    //   for the supported browsers specified by the "targets" option or the ".browserslistrc" file.
-                    // So this option slows down the transpiling and increases the file size of the built ".js".
-                    // But if you don't have to write a lot of JavaScript, you don't have to worry about it.
-                    forceAllTransforms: true,
-                  },
-                ],
-              ],
-            },
-          },
+          {loader: 'ts-loader'},
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts'],
   },
 };
 
