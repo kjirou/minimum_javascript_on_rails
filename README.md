@@ -57,11 +57,17 @@ Therefore, in this project,
 
 - [See this pull-request](https://github.com/kjirou/minimum_javascript_on_rails/pull/9).
 
-### Change the Babel to TypeScript
+### Change the Babel to the TypeScript
+
+- [See this pull-request](https://github.com/kjirou/minimum_javascript_on_rails/pull/10).
 
 ### Create a client side development environment
 
+- (Write later?)
+
 ### Build CSS with Node.js
+
+- (Write later?)
 
 ### Prevent the "Please execute `npm run build` command before operating the Rails." error
 
