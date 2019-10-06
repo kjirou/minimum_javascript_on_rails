@@ -53,15 +53,19 @@ When all those settings are merged into this master branch,
 Therefore, in this project,
   the differences for additional customization will be expressed in the form of pull requests.
 
-### Prevent the "Please execute `npm run build` command before operating the Rails." error
+### Run unit tests with Jest on Node.js
 
-### Run unit tests with Node.js
+- [See this pull-request](https://github.com/kjirou/minimum_javascript_on_rails/pull/9).
 
 ### Change the Babel to TypeScript
 
 ### Create a client side development environment
 
 ### Build CSS with Node.js
+
+### Prevent the "Please execute `npm run build` command before operating the Rails." error
+
+- [See this pull-request](https://github.com/kjirou/minimum_javascript_on_rails/pull/8).
 
 ### Reduce the file size of the built JavaScript
 
