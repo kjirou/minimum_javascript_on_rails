@@ -3,7 +3,7 @@
   "scripts": {
     "build": "npm run clean && npm run webpack",
     "clean": "if [ -e client/tmp ]; then rm -r client/tmp; fi && if [ -e public/client ]; then rm -r public/client; fi",
-    "test": "jest",
+    "test": "$(npm bin)/jest",
     "watch": "$(npm bin)/webpack --config client/webpack/watch-for-development.config.js",
     "webpack": "$(npm bin)/webpack --config client/webpack/production-build.config.js"
   },
