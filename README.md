@@ -1,24 +1,27 @@
 # minimum_javascript_on_rails
 
+- [README (English)](/README.md)
+- [README (日本語)](/README.ja.md)
+
 ## :tipping_hand_woman: What appliction is this?
 
 This is a sample of a Ruby on Rails application
   that is set a minimal Node.js-based JavaScript build environment without [webpacker](https://github.com/rails/webpacker).
 
-If you are a Rails programmer who matches the some following criteria,
-  you may find this repository configuration attractive compared to webpacker.
+If your Rails application meets some of the following conditions,
+  using this repository configuration may be more maintainable.
 
-- I will not write a lot of JavaScript code.
-- Sprockets is sufficient for CSS builds.
-- I want to install only the minimum of npm packages as needed.
-- I want to manage npm packages individually for reasons such as fixing vulnerabilities immediately.
-- I want to release as stable as possible. In return, I can tolerate some inconvenience.
-- Anyway, if I have to study the JavaScript, I want to learn from a more basic point than webpacker.
+- Does not contain much JavaScript code.
+- [sprockets-rails](https://github.com/rails/sprockets-rails) is enough for the style-sheet build environment.
+- Does not install unused npm packages.
+- Manages npm packages as individually as possible so that the required packages can be updated immediately.
+- Developers want to learn more basic JavaScript knowledge than webpacker.
 
 
 ## :wrench: Installation
 ### Softwares that needs to be locally installed
 
+- [Ruby](https://www.ruby-lang.org/) == `2.6`
 - [Node.js](https://nodejs.org/) == `10`
 
 ### Install this sample application
@@ -29,30 +32,18 @@ bin/setup
 ```
 
 
-## :cat: Added functions in client side
+## :cat: Functions added to the client side
 
 - `npm run build`
-  - This command performs a stand-alone build. This is mainly used when releasing to production.
-  - Also during development, if you run it only once,
-    you will not get the "Please execute `npm run build` ..." error.
+  - This command is for a stand-alone build. Mainly we use it for production release.
 - `npm run watch`
   - If the `npm run watch` is running with the `rails server`,
-    JavaScript source modifications are reflected when you reload the browser.
+    JavaScript source changes are applied when you reload the browser.
 - `npm run clean`
-  - Remove files generated from `npm run build` or `npm run watch`.
+  - Clean up files generated from `npm run build` or `npm run watch`.
 
 
 ## :gear: Customize settings
-
-The truth is that the client side is also complicated.  
-For example, just like Rails changes its behavior with additional many settings and gems,
-  it requires a lot of configurations to handle many use cases.
-
-When all those settings are merged into this master branch,
-  the settings may react organically, which ultimately require very many settings.  
-Therefore, in this project,
-  the differences for additional customization will be expressed in the form of pull requests.
-
 ### Run unit tests with Jest on Node.js
 
 - [See this pull-request](https://github.com/kjirou/minimum_javascript_on_rails/pull/9).
@@ -66,6 +57,10 @@ Therefore, in this project,
 - (Write later?)
 
 ### Build CSS with Node.js
+
+- (Write later?)
+
+### Use [Stimulus](https://github.com/stimulusjs/stimulus)
 
 - (Write later?)
 
