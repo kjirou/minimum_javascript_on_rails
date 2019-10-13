@@ -3,7 +3,7 @@
 - [README (English)](/README.md)
 - [README (日本語)](/README.ja.md)
 
-## :tipping_hand_woman: What appliction is this?
+## :tipping_hand_woman: What application is this?
 
 This is a sample of a Ruby on Rails application
   that is set a minimal Node.js-based JavaScript build environment without [webpacker](https://github.com/rails/webpacker).
