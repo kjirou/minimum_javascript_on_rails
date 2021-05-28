@@ -21,22 +21,6 @@ const baseWebpackConfig = {
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    // This "forceAllTransforms" transforms sources for working on many browsers as possible.
-                    //
-                    // Normally, "@babel/preset-env" performs only the minimum necessary conversions
-                    //   for the supported browsers specified by the "targets" option or the ".browserslistrc" file.
-                    // So this option slows down the transpiling and increases the file size of the built ".js".
-                    // But if you don't have to write a lot of JavaScript, you don't have to worry about it.
-                    forceAllTransforms: true,
-                  },
-                ],
-              ],
-            },
           },
         ],
       },
