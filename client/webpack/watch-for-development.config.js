@@ -11,6 +11,9 @@ module.exports = {
   module: {
     rules: baseWebpackConfig.module.rules,
   },
+  resolve: {
+    extensions: baseWebpackConfig.resolve.extensions,
+  },
   plugins: [
     // This is similar to `npm run clean`.
     // If `npm run clean` does not needed to be independent, it can be included in `npm run build`.

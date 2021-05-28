@@ -7,6 +7,9 @@ module.exports = {
   module: {
     rules: baseWebpackConfig.module.rules,
   },
+  resolve: {
+    extensions: baseWebpackConfig.resolve.extensions,
+  },
   plugins: [
     pluginCreators.createAssetsWebpackPlugin(),
   ],
